@@ -14,6 +14,8 @@ import static main.java.container.ConfigurationParameters.METHOD_NAME;
 
 public class HomemadeContainer {
 
+    private static final String SEPARATOR = "=";
+
     private final String configurationFile;
 
     private String componentDatabaseFile;
@@ -37,7 +39,7 @@ public class HomemadeContainer {
 
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                String[] array = line.split("="); //todo rename array
+                String[] array = line.split(SEPARATOR);
                 instantiateConfigParams(array);
             }
         } catch (IOException exception) {
@@ -45,18 +47,18 @@ public class HomemadeContainer {
         }
     }
 
-    private void instantiateConfigParams(String[] array) { //todo rename array
-        if (array[0].equals(DATABASE_FILE.name())) {
+    private void instantiateConfigParams(String[] array) {
+        if (array[0].equals(DATABASE_FILE.getValue())) {
             componentDatabaseFile = array[1];
-        } else if (array[0].equals(INTERFACE_CLASS.name())) {
+        } else if (array[0].equals(INTERFACE_CLASS.getValue())) {
             componentInterfaceClass = array[1];
-        } else if (array[0].equals(IMPLEMENTATION_CLASS.name())) {
+        } else if (array[0].equals(IMPLEMENTATION_CLASS.getValue())) {
             componentImplementationClass = array[1];
-        } else if (array[0].equals(COMPONENT_INSTANCE.name())) {
+        } else if (array[0].equals(COMPONENT_INSTANCE.getValue())) {
             componentInstanceClass = array[1];
-        } else if (array[0].equals(METHOD_NAME.name())) {
+        } else if (array[0].equals(METHOD_NAME.getValue())) {
             componentMethodName = array[1];
-        } else if (array[0].equals(METHOD_PARAMETER.name())) {
+        } else if (array[0].equals(METHOD_PARAMETER.getValue())) {
             methodParameter = array[1];
         }
     }

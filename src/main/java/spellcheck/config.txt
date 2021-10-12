@@ -1,0 +1,6 @@
+databaseFile=C:\Users\AnaBajanescu\Desktop\master_UPT\labs&courses\sem1\CBSE\IoCContainer\src\main\java\spellcheck\romanianSpellChecks.txt
+interface=main.java.spellcheck.SpellChecker
+implementationClass=main.java.spellcheck.RomanianSpellChecker
+componentInstance=main.java.spellcheck.TextEditor
+methodName=getCorrectFormOfWord
+methodParameter=monstra

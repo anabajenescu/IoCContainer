@@ -1,0 +1,6 @@
+databaseFile=C:\Users\AnaBajanescu\Desktop\master_UPT\labs&courses\sem1\CBSE\IoCContainer\src\main\java\movie\movies.txt
+interface=main.java.movie.MovieFinder
+implementationClass=main.java.movie.MovieFinderImplementation
+componentInstance=main.java.movie.MovieLister
+methodName=getMoviesDirectedBy
+methodParameter=Peter Jackson

@@ -9,6 +9,13 @@ public enum ConfigurationParameters {
     METHOD_NAME("methodName"),
     METHOD_PARAMETER("methodParameter");
 
-    private ConfigurationParameters(final String value) {
+    private final String value;
+
+    ConfigurationParameters(final String value) {
+        this.value = value;
+    }
+
+    public String getValue() {
+        return value;
     }
 }
